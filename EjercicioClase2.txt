@@ -15,6 +15,7 @@ visibles.
 modifique algo DISTINTO en su copia local y haga un commit de dichos cambios.
 8. Ahora pruebe hacer un push de sus cambios. ¿Qué sucedió? ¿ cómo puede proseguir?
 9. Arregle el problema
+
 En este punto, recomendamos, aunque no es obligatorio, que dentro de un repositorio (por
 ejemplo el que creó recién), tengan una carpeta por clase (dictada teórica) del curso, y dentro
 de cada clase tengan un proyecto con los ejercicios con los que se va avanzando. Puede
