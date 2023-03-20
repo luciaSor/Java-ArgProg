@@ -2,32 +2,60 @@ package Ejercicio02;
 
 public class Codificacion_Decodificacion {
 	
-public static void Metodo_codificacion(){
+	static void codificacion(int desp , String txt){
+		char[] abc = "abcdefghijklmnñopqrstuvwxyz".toLowerCase().toCharArray();
+		char[] mensaje = txt.toLowerCase().toCharArray();
 		
-	int desplazamiento = 1 ;
-		char[] abecedario = {'a','b','c','d','e','f','g','h','i','j','k','l','m','n','ñ','o','p','q','r','s','t','u','v','w','x','y','z'};
-		String mensaje = "hola que tal z";
-		char[] texto = mensaje.toCharArray();
-	
-		
-        for (int i = 0; i < texto.length; i++) {
-        	for(int j=0;j<abecedario.length;j++) {
-        		if(texto[i] == abecedario[j]) {
-        			int auxiliar = j + desplazamiento;
-        			//texto[i] = abecedario[auxiliar];
-        		}
-            }
-        }
-        
-        	System.out.println(texto);
-        
-        return;
-}
+		System.out.println("Texto: \"" +txt +"\" Desplazamiento " +desp);
+		System.out.println("Codificacion: ");
 
-	
-	public static void main(String[] args) {
+		 
+		for(int i = 0; i< mensaje.length ;i++) {
+			for(int j = 0; j < abc.length; j++) {
+				if(mensaje[i] == abc [j]) {
+					System.out.print(abc[j + desp]);
+				}
+				
+			}
+			if(mensaje[i] == ' ') {
+				System.out.print(abc[0]);
+			}
+		}
+			System.out.println("\n");
+			return;
+		}
+	static void decodificacion(int desp2 , String txt2) {
 		
-		  Metodo_codificacion();
+		char[] abc2 = "abcdefghijklmnñopqrstuvwxyz".toLowerCase().toCharArray();
+		char[] mensaje2 = txt2.toLowerCase().toCharArray();
+		
+		System.out.println("Texto: \"" +txt2 +"\" Desplazamiento: " +desp2);
+		System.out.println("Decodificacion: ");
+
+		for(int i = 0 ; i < mensaje2.length; i++) {
+			for(int j = 0; j < abc2.length; j++) {
+				if(mensaje2[i]== abc2[j] && j - desp2	>= 0 ) {
+					System.out.print(abc2[j- desp2]);
+				}
+			}
+			
+			if(mensaje2[i] == 'b') {
+				System.out.print(" ");
+			}
+		}
+		return;
 	}
+	 public static void main(String[] args) throws Exception {
+	        // Your code here!
+	        int desplazar = 1;
+	        int desplazar2 = 2;
+	        
+	        String texto = "hola que tal";
+	        String texto2= "jqncbswgbvcn";
+	        
+	       codificacion(desplazar , texto);
+	       
+	       decodificacion(desplazar2 , texto2);
+	    }
 }
 
