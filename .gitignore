@@ -283,3 +283,4 @@ nbdist/
 *.xhtml
 
 # End of https://www.toptal.com/developers/gitignore/api/java,maven,eclipse,intellij+iml,intellij+all,netbeans,web
+*.mp4
