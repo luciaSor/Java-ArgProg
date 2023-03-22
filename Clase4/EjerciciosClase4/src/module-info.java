@@ -5,5 +5,5 @@
  * @author sors
  *
  */
-module Clase4 {
+module EjerciciosClase4 {
 }
