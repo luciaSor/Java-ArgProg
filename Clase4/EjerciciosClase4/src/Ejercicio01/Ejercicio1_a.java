@@ -7,11 +7,11 @@ public class Ejercicio1_a {
 		// haga un main, donde por parámetro ponga 3 números y una letra que
 		// represente ascendente o descendente y los muestre ordenados por tal criterio
 	
-		char opcion = 'a';
+		char opcion = 'b';
 		int[] numeros = new int[] {58,9,13};
 		
 		System.out.println("{" +numeros[0] +" , " +numeros[1] +" , " +numeros[2] +"}");
-		System.out.println("Opcion: \n" +opcion);
+		System.out.println("Opcion:  'a' (ordenamiento ascendende) - 'b' (ordenamiento descendente)\n" +opcion);
 		
 		// ordenamiento ascendente
 		
