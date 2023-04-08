@@ -1,0 +1,7 @@
+
+Archivo .jar:
+
+https://jdbc.postgresql.org/download/
+
+https://dev.mysql.com/downloads/file/?id=515796
+

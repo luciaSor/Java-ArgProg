@@ -13,13 +13,26 @@ public class Codificacion_Decodificacion {
 		for(int i = 0; i< mensaje.length ;i++) {
 			for(int j = 0; j < abc.length; j++) {
 				if(mensaje[i] == abc [j]) {
-					System.out.print(abc[j + desp]);
+					//System.out.print(abc[j + desp]);
+					if(j+desp>=abc.length) {
+
+						System.out.print(abc[desp-1]);
+
+					}else {
+
+						System.out.print(abc[j + desp]);
+
+					}
+
+					break;
 				}
 				
 			}
+			
 			if(mensaje[i] == ' ') {
 				System.out.print(abc[0]);
 			}
+			
 		}
 			System.out.println("\n");
 			return;

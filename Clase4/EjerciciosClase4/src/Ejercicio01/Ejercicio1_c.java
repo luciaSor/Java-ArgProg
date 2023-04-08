@@ -21,7 +21,7 @@ public class Ejercicio1_c {
 						opcion = scanner.next().charAt(0);
 					}
 	            	
-	            	if (opcion == 'a') {
+	            if (opcion == 'a') {
 	            ascendente(numeros);
 	        } else if (opcion == 'b') {
 	            descendente(numeros);
