@@ -25,7 +25,7 @@ public class Ejercicio1_b {
 	}
 	
 	public static void ordenarAscDes(int[] num , char op) {
-		 
+		
 		int[] ordnumeros = new int[num.length];
 		char opcionord = op;
 		

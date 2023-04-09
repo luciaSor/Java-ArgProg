@@ -36,5 +36,5 @@ public class Ejercicio1_a {
 				System.out.println("{" +numeros[0] +" , " + numeros[1] +" , " +numeros[2] +"}");
 		
 	}
-
+	
 }

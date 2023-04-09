@@ -3,40 +3,31 @@
 
 package Ejercicio2;
 
-import java.io.IOException;
-import java.nio.charset.StandardCharsets;
-import java.nio.file.Files;
-import java.nio.file.Paths;
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
 
 public class Ejercicio2 {
 
 	public static void main(String[] args) {
-		
-		String linea2 = null;
-		
-		String ruta1 = "C:\\Users\\sors\\Documents\\GitHub\\Java-ArgProg\\Clase4\\EjerciciosClase4\\src\\Ejercicio2\\Numeros.txt";
-		
-		System.out.println("Los números del archivo son:");
-		try {
+		Scanner numeros = null;
+		try{
+			numeros = new Scanner(new File("C:\\Users\\sors\\Documents\\GitHub\\Java-ArgProg\\Clase4\\EjerciciosClase4\\src\\Ejercicio2\\Numeros.txt"));
 			
-			for(String linea : Files.readAllLines(Paths.get(ruta1), StandardCharsets.ISO_8859_1)) {
-				linea2 = linea;
-				System.out.println(linea);
-				}
-		} catch (IOException e) {
-			
+		} catch (FileNotFoundException e) {
+			System.out.println("Archivo no encontrado!");
 			e.printStackTrace();
-			System.out.println("Error! al leer los datos");
 		}
-		int sum = 0;
-		for(int i=0; i < linea2.length() ; i++) {
-			if(linea2.charAt(i) != ' ') {
-			sum += (int) Character.getNumericValue( linea2.charAt(i));
-			}
+		
+		System.out.println("De los siguientes números: ");
+		
+		int suma = 0, num =0;
+		while(numeros.hasNext()) {
+			
+			num = numeros.nextInt();
+			System.out.println(num);
+			suma += num;
 		}
-	
-		System.out.println(sum);
-		System.out.println(linea2);
+		System.out.println("La suma de los numeros es:" +suma);
+		}
 	}
-}
