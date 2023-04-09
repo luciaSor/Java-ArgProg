@@ -32,8 +32,8 @@ public class ejercicio3 {
 				}else {
 					if(op.charAt(0) == 'b') {
 						decodificacion(desplazamiento , texto2);
-				   }
-				   }
+				}
+				}
 			} catch (FileNotFoundException e) {
 				System.out.println("Error! No se encontró el archivo entrada.txt");
 				e.printStackTrace();
@@ -65,10 +65,10 @@ public class ejercicio3 {
 		}
 		//escribir en archivo salida.txt
 		try {
-			FileWriter out = new FileWriter("C:\\Users\\sors\\Documents\\GitHub\\Java-ArgProg\\Clase4\\EjerciciosClase4\\src\\Ejercicio3\\salida.txt");
-			out.write(resultado2);
+			FileWriter salida = new FileWriter("C:\\Users\\sors\\Documents\\GitHub\\Java-ArgProg\\Clase4\\EjerciciosClase4\\src\\Ejercicio3\\salida.txt");
+			salida.write(resultado2);
 			System.out.println("Exitosa ..........");
-		       out.close();
+		salida.close();
 		} catch (IOException e) {
 			System.out.println("Error! No se pudo concretar.");
 			e.printStackTrace();
@@ -82,7 +82,7 @@ public class ejercicio3 {
 		System.out.println("Texto: \"" +txt +"\" Desplazamiento " +desp);
 		System.out.println("Codificacion guardada!");
 
-		 
+
 		for(int i = 0; i< mensaje.length ;i++) {
 			for(int j = 0; j < abc.length; j++) {
 				if(mensaje[i] == abc [j]) {
@@ -112,15 +112,15 @@ public class ejercicio3 {
 		}
 			//escribir en archivo salida.txt
 		try {
-			FileWriter out = new FileWriter("C:\\Users\\sors\\Documents\\GitHub\\Java-ArgProg\\Clase4\\EjerciciosClase4\\src\\Ejercicio3\\salida.txt");
-			out.write(resultado);
+			FileWriter salida = new FileWriter("C:\\Users\\sors\\Documents\\GitHub\\Java-ArgProg\\Clase4\\EjerciciosClase4\\src\\Ejercicio3\\salida.txt");
+			salida.write(resultado);
 			System.out.println("Exitosa ..........");
-		       out.close();
+		    salida.close();
 		} catch (IOException e) {
 			System.out.println("Error! No se pudo concretar.");
 			e.printStackTrace();
 		}
-	       
+		
 			System.out.println("\n");
 	}	
 
